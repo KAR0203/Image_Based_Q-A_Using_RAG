@@ -25,7 +25,7 @@ This project enables users to ask questions about the contents of an image using
 
 ## 📂 Files Included
 
-- `Image_based_Q&A (2).ipynb` – Main Jupyter Notebook with code.
+- `Image_based_Q&A.ipynb` – Main Jupyter Notebook with code.
 - `README.md` – Project documentation.
 
 ---

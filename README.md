@@ -1,38 +1,51 @@
 # 🧠 Image-Based Q&A Using RAG
 
-This project enables users to ask questions about the contents of an image using a **Retrieval-Augmented Generation (RAG)** approach. It combines vision and language models to understand image context and answer questions accordingly.
+## 📌 Overview
+
+This project implements an **Image-Based Question Answering** system using the concept of **Retrieval-Augmented Generation (RAG)**. The model can interpret an image, generate a descriptive caption, and answer user questions based on the image content.
 
 ---
 
-## 📌 Features
+## 🛠 Technologies Used
 
-- 📸 Upload an image (JPG/PNG)
-- 🧾 Generate a descriptive caption using **BLIP-2**
-- ❓ Ask questions about the image
-- 🤖 Use **Sentence Transformers** to match your question to the context
-- 🧠 Generate answers using a **Large Language Model (LLM)**
+| Task                    | Technology / Library                                 |
+|-------------------------|------------------------------------------------------|
+| Image Captioning        | `BLIP-2` (via Hugging Face Transformers)             |
+| Language Modeling       | `AutoModelForCausalLM` (e.g., GPT-style LLMs)        |
+| Question Embedding (optional) | `sentence-transformers`                        |
+| Tokenization            | `AutoTokenizer`                                      |
+| Transformer Integration | `transformers` by Hugging Face                      |
+| Environment             | Google Colab (Python 3)                              |
 
 ---
 
 ## 🚀 How It Works
 
-1. **Upload Image**: The image is processed to extract a caption.
-2. **Generate Context**: The image caption is passed to a sentence transformer.
-3. **Ask Questions**: User can ask questions about the image content.
-4. **Answer Generated**: A large language model answers the question based on the caption.
+1. **Upload Image**: A `.jpg` or `.png` image is uploaded.
+2. **Caption Generation**: BLIP-2 generates a caption that describes the image.
+3. **User Input**: User types a question about the image.
+4. **Answer Generation**: A language model generates an answer based on the caption + question.
 
 ---
 
-## 📂 Files Included
+## 🔄 Example Flow
 
-- `Image_based_Q&A.ipynb` – Main Jupyter Notebook with code.
-- `README.md` – Project documentation.
+| Step       | Output                                      |
+|------------|---------------------------------------------|
+| 🖼 Image     | A cat sitting on a laptop                  |
+| 📝 Caption  | "A grey cat sitting on a laptop keyboard." |
+| ❓ Question | "What is the cat sitting on?"               |
+| 🤖 Answer   | "The cat is sitting on a laptop keyboard." |
 
 ---
 
-## 📦 Requirements
+## ✨ Features
 
-Install dependencies with:
+- Multimodal AI: Combines image and text understanding.
+- Uses open-source Transformer models.
+- No external search needed — works on the image content directly.
+- Fully runs in Google Colab.
 
-```bash
-pip install transformers sentence-transformers torch streamlit
+---
+
+
